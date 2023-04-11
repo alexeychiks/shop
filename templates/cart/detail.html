@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+{%load static%}
+{% block title %}Корзина{% endblock %}
+
+{% block content %}
+<div class="main_category"><p class="clothes_title">Корзина</p></div>
+
+<div class="container_thing">
+      {% for item in cart %}
+        {% with product=item.product %}
+<div class="container_img"><p class="discr">{{ product.name }}</p>
+
+              <a href="{{ product.get_absolute_url }}">
+                <img class="small_img" src="{% if product.image %}{{ product.image.url }}
+                {% endif %}">
+              </a>
+        </div>
+    <div class="container_discription">
+       <p class="discr">Размер: {{ item.size}}</p>
+        <p class="discr">Количество:</p>
+        <div class="numbers_cart"><form class="numbers_form" action="{% url 'cart:cart_add' product.id %}" method="post">
+
+	<button>
+                {{ item.update_quantity_form.update }}{{ item.update_quantity_form.quantity }}</button>
+
+            <div hidden>{{ item.update_quantity_form.size }}</div>
+                {% csrf_token %}
+              </form></div>
+            <a class="button" href="{% url 'cart:cart_remove' product.id %}">Удалить {{ item.quantity }}</a>
+
+</div>
+
+{% endwith %}
+      {% endfor %}
+<div class="zakaz">
+    <p class="price_cart">Всего: {{ cart.get_total_price }} р</p>
+<a class="button" href="{% url 'order_create'%}" >Оформить заказ</a>
+<a class="button" href="{% url 'main' %}" >Вернуться на главную</a></div>
+</div>
+{% endblock %}
+

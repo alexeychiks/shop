@@ -1,0 +1,10 @@
+{% extends 'index.html'%}
+{%load static%}
+{% block title%}<title>{{category}}</title>{%endblock%}
+{% block content %}
+<div class="main_category"><p class="clothes_title">Активация проедена</p></div>
+<div class="container_utils">
+<p class="all_util">Поздравляем с активацией</p>
+<a class="butt" href="{% url 'login' %}">Войти на сайт</a>
+</div>
+{%endblock%}

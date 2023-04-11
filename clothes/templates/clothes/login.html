@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{%load static%}
+{% block title %}Вход{% endblock %}
+{% block content %}
+<div class="main_category"><p class="clothes_title">Вход<br><a class="button" href="{% url 'register' %}" >Зарегестрироваться</a> </p></div>
+<form method='post'><div class="container_login">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Войти" class="button"></div>
+</form>
+
+{% endblock %}

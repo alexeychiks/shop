@@ -1,0 +1,21 @@
+{% extends 'index.html'%}
+{%load static%}
+{% block title%}<title>{{category}}</title>{%endblock%}
+{% block content %}<div class="main_category"><p class="clothes_title">{{category}}</p></div>
+<div class="container_product">
+
+       {%for product in products%}
+        <a href="{% url 'product' product.url%}" class="more_info">
+        <div class="product">
+            <img src="{{ product.image.url }}" alt="" class="product_img">
+            <p class="text">{{product.name}} </p>
+            <br>
+            <p class="cost">{{product.price}}</p>
+            <div class="liner"></div>
+        </div>
+        </a>
+        <br>
+        <br>
+{%endfor%}
+</div>
+{%endblock%}

@@ -1,0 +1,5 @@
+{%autoescape off%}
+Привет {{user.username}},
+Чтобы подтвердить свою почту, пройдите по ссылке ниже,
+https://anyabe{%url 'activate' uidb64=uid token=token%}
+{%endautoescape%}

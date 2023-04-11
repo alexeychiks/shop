@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block title %}Профиль{% endblock %}
+
+{% block content %}<div class="main_category"><p class="clothes_title">Личный кабинет</p></div>
+<div class="container_utils">
+    <h2>Профиль пользователя </h2>
+    <br>
+    <br>
+{% if user.first_name %}
+<p class="all_util">3дравствуйте, {{ user.first_name }}!</p>
+{% else %}
+<p class="all_util"> 3дравствуйте! {{user.username}}</p>
+{% endif %}
+<a href="{% url 'logout' %}" class="butt">Выйти</a>
+</div>
+{% endblock %}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywordws" content="ключевые слова">
+    <meta name="Author" content="Алексей">
+    {% block title%}<title>Anya Belikaya</title>{%endblock%}
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Roboto+Slab&family=Yeseva+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">'
+<link rel="stylesheet" href="{% static 'clothes/css/style.css'%}">
+<link rel="stylesheet" href="{% static 'clothes/css/clothes.css'%}">
+<link rel="stylesheet" href="{% static 'clothes/css/product.css'%}">
+    <link rel="stylesheet" href="{% static 'clothes/css/login_registration.css'%}">
+    <link rel="stylesheet" href="{% static 'clothes/css/for_orders.css'%}">
+    <link rel="stylesheet" href="{% static 'clothes/css/cart.css'%}">
+    <link rel="stylesheet" href="{% static 'clothes/css/utils.css'%}">
+    <link rel="stylesheet" href="{% static 'clothes/css/footer.css'%}">
+
+<link rel="stylesheet" href="{% static 'clothes/css/some.css'%}">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header_container  _container" >
+                <a href="{% url 'main' %}" class="header_logo"><img src="{% static 'clothes/images/anya belikaya (2).gif'%}" class="logo_img"></a>
+                <div class="header_burger">
+                    <span></span>
+                </div>
+                <nav class="header_menu">
+                    <ul class="menu_list">
+                        <li class="menu_item">
+                            <a href="" class="menu_link">Контакты</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="" class="menu_link">О нас</a>
+                        </li>
+                        <li class="menu_item">
+                            {% if user.is_authenticated %}
+                            <a href="{% url 'profile' %}" class="menu_link">{{user.username}}</a>
+                            {% else %}
+                            <a href="{% url 'login' %}" class="menu_link">Личный кабинет</a>
+                            {% endif %}
+                        </li>
+
+                    </ul>
+                    <ul class="catalog_list">
+                        {%for category in categories%}
+                            <li class="catalog_item">
+                                <a href="{% url 'products' category.url%}" class="catalog_link">{{category.name}}</a>
+                            </li>
+                        {%endfor%}
+                    </ul>
+                </nav>
+                <div class="bag"><a href="{%url 'cart:cart_detail'%}"><img src="{% static 'clothes/images/bag.png'%}" alt=""></a></div>
+            </div>
+         </header>
+
+        <main class="page">
+            {%block content%}
+            <div class="swiper" id="first">
+                <div class="swiper-wrapper">
+                    {%for pict in picture%}
+                    <div class="swiper-slide"><img class="slide_img" src="{{ pict.main_image1 }}" alt=""></div>
+                    {%endfor%}
+                    {%for pict in picture%}
+                    <div class="swiper-slide"><img class="slide_img" src="{{ pict.main_image2 }}" alt=""></div>
+                    {%endfor%}
+                    {%for pict in picture%}
+                    <div class="swiper-slide"><img class="slide_img" src="{{ pict.main_image3 }}" alt=""></div>
+                    {%endfor%}
+                </div>
+                <div class="swiper-pagination"></div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <img class="footer_button" src="{% static 'clothes/arrow.jpg'%}" alt="">
+            </div>
+            <div class="new_colections">НОВЫЕ ПОСТУПЛЕНИЯ</div>
+            <div class="line"></div>
+            <div class="swiperr" id="second">
+                <div class="swiper-wrapper">
+                    {%for product in products%}
+
+                            <div class="swiper-slide">
+                                <a href="{% url 'product' product.url%}" class="more_info">
+                                    <img class="slide_img" src="{{ product.image.url }}" alt="">
+                                    <p class="discript">{{product.name}}</p>
+                                </a>
+                            </div>
+
+                    {%endfor%}
+                </div>
+                <div class="thirdp swiper-button-prev"></div>
+                <div class="thirdn swiper-button-next"></div>
+            </div>
+            <div class="new_colections">ПОПУЛЯРНЫЕ ТОВАРЫ</div>
+            <div class="line"></div>
+            <div class="swiperrr" id="third">
+                <div class="swiper-wrapper">
+                    {%for product in products%}
+
+                            <div class="swiper-slide">
+                                <a href="{% url 'product' product.url%}" class="more_info">
+                                    <img class="slide_img" src="{{ product.image.url }}" alt="">
+                                    <p class="discript">{{product.name}}</p>
+                                </a>
+                            </div>
+
+                    {%endfor%}
+
+                </div>
+                <div class="secondp swiper-button-prev"></div>
+                <div class="secondn swiper-button-next"></div>
+            </div>
+        {%endblock%}
+        </main>
+
+
+        <footer class="footer">
+            <div class="footer_container _container">
+                <div class="first_column">
+                    <ul>
+                        <li class="footer_item">
+                            © 2023. ANYABELIKAYA
+                        </li>
+                        <li class="footer_item">
+                            <a class="footer_link" href="#">Политика конфиденциальности</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="second_column">
+                    <ul>
+                        <li class="footer_item">
+                            <a class="footer_link" href="#">Публичная оферта</a>
+                        </li>
+                        <li class="footer_item">
+                            <a class="footer_link" href="#">Согласие на обработку персональных данных</a>
+                        </li>
+                        <li class="footer_item">
+                    </ul>
+                    <br>
+                        <ul><li class="footer_item">
+                    ООО «Фабрик»
+                </li>
+                <li class="footer_item">
+                    ОГРН 1164704050081
+                </li>
+                <li class="footer_item">
+                    ИНН/КПП 4704098712/470401001
+                </li >
+                <li class="footer_item"></ul>
+                </div>
+                <div class="third_column">
+                    <ul>
+                        {%for inf in info%}
+                        <li class="footer_item">
+                            <a class="footer_link" href=""><img src="{% static 'clothes/images/mail_icon_128820.svg'%}"  alt="">{{inf.tel}}</a>
+                        </li>
+                        <br>
+                        <li class="footer_item">
+                            <a class="footer_link" href="tel:89680434218"><img src="{% static 'clothes/images/icons8-смартфон-24.png'%}">{{inf.mail}}</a>
+                        </li>
+                        {%endfor%}
+
+                </ul>
+
+
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="{% static 'clothes/main.js'%}"></script>
+
+</body>
+</html>

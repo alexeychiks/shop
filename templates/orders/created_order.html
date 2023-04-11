@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% block title %}
+    Thank you
+{% endblock %}
+
+{% block content %}
+<div class="main_category"><p class="clothes_title">Заказ оформлен</p></div>
+<div class="container_utils">
+    <h1>Спасибо</h1>
+<br>
+<br>
+    <p class="all_util">Ваш заказ принят! Письмо с данными заказа отправлено на почту.
+        Ваш номер заказа:
+        <strong>{{ order.id }}</strong>.</p>
+</div>
+{% endblock %}
