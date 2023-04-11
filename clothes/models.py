@@ -44,10 +44,6 @@ class Product(models.Model):
     characteristic = models.ForeignKey('Characteristic', on_delete=models.SET_NULL, verbose_name='характеристика',
                                        null=True)
     available = models.BooleanField(default=False, verbose_name='наличие')
-    two= models.BooleanField(default=False, verbose_name='42 размер')
-    three = models.BooleanField(default=False, verbose_name='44 размер')
-    four = models.BooleanField(default=False, verbose_name='46 размер')
-    five = models.BooleanField(default=False, verbose_name='48 размер')
     url = models.SlugField(max_length=160, unique=True)
 
 
@@ -72,15 +68,8 @@ class Profile(AbstractUser):
 
     class Meta(AbstractUser.Meta):
         pass
-class Information(models.Model):
-    about_us = models.TextField(verbose_name='О нас',)
-    class Meta:
-        verbose_name ='Информация о сайте'
-        verbose_name_plural = 'Информация о сайте'
-
     def __str__(self):
-        return self.about_us
-
-class Contacts(models.Model):
-      tel = models.CharField(verbose_name='телефон',max_length=303)
-      mail = models.CharField(verbose_name='почта',max_length=50)
+        return f'{self.name}'
+    class Meta:
+        verbose_name = 'Размер'
+        verbose_name_plural = 'Размеры'

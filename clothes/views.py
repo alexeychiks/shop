@@ -22,7 +22,6 @@ from django.views.generic.edit import CreateView, UpdateView
 
 @login_required
 def profile(request):
-    about_us = models.Information.objects.get('tel')
     products = models.Product.objects.all
     categories = models.Category.objects.all
     context = {'products': products,
@@ -30,13 +29,11 @@ def profile(request):
     return render(request, 'clothes/profile.html', context)
 
 def index(request):
-    info = models.Contacts.objects.all
     pict = models.MainPictirues.objects.all
     categories = models.Category.objects.all
-    clothes = Product.objects.all
-    products = Product.objects.all
+    clothes = models.Product.objects.all
+    products =models.Product.objects.all
     context = {
-        'info':info,
         'categories': categories,
         'clothes': clothes,
         'picture':pict,
@@ -55,7 +52,6 @@ def products(request, slug):
     }
 
     return render(request, 'clothes/clothes.html', context)
-
 def product(request, product_url):
     categories = models.Category.objects.all
     product = models.Product.objects.get(url=product_url)
@@ -94,9 +90,11 @@ def user_register(request):
             user.set_password(form.cleaned_data['password1'])
             user.is_active = False
             user.save()
+            current_site = get_current_site(request)
             email_subject = 'Активируйте свой аккаунт'
             message = render_to_string('clothes/register_done.html', {
                                     'user': user,
+                                     'domain': current_site.domain,
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                 'token': account_activation_token.make_token(user),
 

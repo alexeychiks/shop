@@ -1,0 +1,66 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus, a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+  color: #252B42;
+  font-family: 500;
+  height: 100%;
+  width:100%;
+  font-size: 100%;
+  line-height: -1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+}
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display:none;}
+button{cursor: pointer;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align:top;}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	opacity: 1;
+	padding: 0 10px 0 0;
+}
+
+@media (max-width: 781px){
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+   opacity:1;
+   visibility: visible;
+}
+}
+.how_many{
+padding: 3px;
+font-size: 18px;
+display: block;
+width: 45px;
+border: 2px solid #000;
+}
+.zakaz{
+margin: 10% 0 5% 5%;
+display: flex;
+flex-direction: column;
+}
+.price_cart{
+font-size: 18px;
+margin: 0 0 10% 0
+}

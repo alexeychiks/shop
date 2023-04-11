@@ -10,5 +10,5 @@ urlpatterns = [
     path('accounts/profile/', views.profile, name = 'profile'),
     path('logout/', views.BBLogoutView.as_view(), name='logout'),
     path('register/', views.user_register, name = 'register'),
-    path ('<uidb64>/<token>/', views.activate_account,name='activate'),
+    path ('activate/<uidb64>/<token>/', views.activate_account,name='activate'),
 ]

@@ -1,10 +1,7 @@
 from django import forms
-from clothes.models import *
 
 PRODUCT_QUANTITY_CHOICES = [(i, str(i)) for i in range(1,21)]
-
-if Product.two:
-    GEEKS_CHOICES = [(i, str(i)) for i in range(0,1)]
+GEEKS_CHOICES = [(j, str(j)) for j in range(42, 49, 2)]
 
 
 class CartProductForm(forms.Form):

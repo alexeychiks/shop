@@ -1,7 +1,6 @@
 from decimal import Decimal
 from django.conf import settings
 
-from cart.forms import CartProductForm
 from clothes import models
 
 
