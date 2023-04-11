@@ -44,6 +44,10 @@ class Product(models.Model):
     characteristic = models.ForeignKey('Characteristic', on_delete=models.SET_NULL, verbose_name='характеристика',
                                        null=True)
     available = models.BooleanField(default=False, verbose_name='наличие')
+    size1 = models.BooleanField(default=False, verbose_name='42')
+    size2 = models.BooleanField(default=False, verbose_name='44')
+    size3 = models.BooleanField(default=False, verbose_name='46')
+    size4 = models.BooleanField(default=False, verbose_name='48')
     url = models.SlugField(max_length=160, unique=True)
 
 
@@ -68,8 +72,3 @@ class Profile(AbstractUser):
 
     class Meta(AbstractUser.Meta):
         pass
-    def __str__(self):
-        return f'{self.name}'
-    class Meta:
-        verbose_name = 'Размер'
-        verbose_name_plural = 'Размеры'
