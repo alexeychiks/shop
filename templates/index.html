@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,27 +10,29 @@
     <meta name="keywordws" content="ключевые слова">
     <meta name="Author" content="Алексей">
     {% block title%}<title>Anya Belikaya</title>{%endblock%}
-    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Roboto+Slab&family=Yeseva+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">'
-<link rel="stylesheet" href="{% static 'clothes/css/style.css'%}">
-<link rel="stylesheet" href="{% static 'clothes/css/clothes.css'%}">
-<link rel="stylesheet" href="{% static 'clothes/css/product.css'%}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Roboto+Slab&family=Yeseva+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">'
+    <link rel="stylesheet" href="{% static 'clothes/css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'clothes/css/clothes.css'%}">
+    <link rel="stylesheet" href="{% static 'clothes/css/product.css'%}">
     <link rel="stylesheet" href="{% static 'clothes/css/login_registration.css'%}">
     <link rel="stylesheet" href="{% static 'clothes/css/for_orders.css'%}">
     <link rel="stylesheet" href="{% static 'clothes/css/cart.css'%}">
     <link rel="stylesheet" href="{% static 'clothes/css/utils.css'%}">
     <link rel="stylesheet" href="{% static 'clothes/css/footer.css'%}">
 
-<link rel="stylesheet" href="{% static 'clothes/css/some.css'%}">
+    <link rel="stylesheet" href="{% static 'clothes/css/some.css'%}">
 </head>
+
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="header_container  _container" >
-                <a href="{% url 'main' %}" class="header_logo"><img src="{% static 'clothes/images/anya belikaya (2).gif'%}" class="logo_img"></a>
+            <div class="header_container  _container">
+                <a href="{% url 'main' %}" class="header_logo"><img
+                        src="{% static 'clothes/images/anya belikaya (2).gif'%}" class="logo_img"></a>
                 <div class="header_burger">
                     <span></span>
                 </div>
@@ -52,15 +55,16 @@
                     </ul>
                     <ul class="catalog_list">
                         {%for category in categories%}
-                            <li class="catalog_item">
-                                <a href="{% url 'products' category.url%}" class="catalog_link">{{category.name}}</a>
-                            </li>
+                        <li class="catalog_item">
+                            <a href="{% url 'products' category.url%}" class="catalog_link">{{category.name}}</a>
+                        </li>
                         {%endfor%}
                     </ul>
                 </nav>
-                <div class="bag"><a href="{%url 'cart:cart_detail'%}"><img src="{% static 'clothes/images/bag.png'%}" alt=""></a></div>
+                <div class="bag"><a href="{%url 'cart:cart_detail'%}"><img src="{% static 'clothes/images/bag.png'%}"
+                            alt=""></a></div>
             </div>
-         </header>
+        </header>
 
         <main class="page">
             {%block content%}
@@ -88,12 +92,12 @@
                 <div class="swiper-wrapper">
                     {%for product in products%}
 
-                            <div class="swiper-slide">
-                                <a href="{% url 'product' product.url%}" class="more_info">
-                                    <img class="slide_img" src="{{ product.image.url }}" alt="">
-                                    <p class="discript">{{product.name}}</p>
-                                </a>
-                            </div>
+                    <div class="swiper-slide">
+                        <a href="{% url 'product' product.url%}" class="more_info">
+                            <img class="slide_img" src="{{ product.image.url }}" alt="">
+                            <p class="discript">{{product.name}}</p>
+                        </a>
+                    </div>
 
                     {%endfor%}
                 </div>
@@ -106,12 +110,12 @@
                 <div class="swiper-wrapper">
                     {%for product in products%}
 
-                            <div class="swiper-slide">
-                                <a href="{% url 'product' product.url%}" class="more_info">
-                                    <img class="slide_img" src="{{ product.image.url }}" alt="">
-                                    <p class="discript">{{product.name}}</p>
-                                </a>
-                            </div>
+                    <div class="swiper-slide">
+                        <a href="{% url 'product' product.url%}" class="more_info">
+                            <img class="slide_img" src="{{ product.image.url }}" alt="">
+                            <p class="discript">{{product.name}}</p>
+                        </a>
+                    </div>
 
                     {%endfor%}
 
@@ -119,7 +123,7 @@
                 <div class="secondp swiper-button-prev"></div>
                 <div class="secondn swiper-button-next"></div>
             </div>
-        {%endblock%}
+            {%endblock%}
         </main>
 
 
@@ -148,30 +152,34 @@
                         <li class="footer_item">
                     </ul>
                     <br>
-                        <ul><li class="footer_item">
-                    ООО «Фабрик»
-                </li>
-                <li class="footer_item">
-                    ОГРН 1164704050081
-                </li>
-                <li class="footer_item">
-                    ИНН/КПП 4704098712/470401001
-                </li >
-                <li class="footer_item"></ul>
+                    <ul>
+                        <li class="footer_item">
+                            ООО «Фабрик»
+                        </li>
+                        <li class="footer_item">
+                            ОГРН 1164704050081
+                        </li>
+                        <li class="footer_item">
+                            ИНН/КПП 4704098712/470401001
+                        </li>
+                        <li class="footer_item">
+                    </ul>
                 </div>
                 <div class="third_column">
                     <ul>
                         {%for inf in info%}
                         <li class="footer_item">
-                            <a class="footer_link" href=""><img src="{% static 'clothes/images/mail_icon_128820.svg'%}"  alt="">{{inf.tel}}</a>
+                            <a class="footer_link" href=""><img src="{% static 'clothes/images/mail_icon_128820.svg'%}"
+                                    alt="">{{inf.tel}}</a>
                         </li>
                         <br>
                         <li class="footer_item">
-                            <a class="footer_link" href="tel:89680434218"><img src="{% static 'clothes/images/icons8-смартфон-24.png'%}">{{inf.mail}}</a>
+                            <a class="footer_link" href="tel:89680434218"><img
+                                    src="{% static 'clothes/images/icons8-смартфон-24.png'%}">{{inf.mail}}</a>
                         </li>
                         {%endfor%}
 
-                </ul>
+                    </ul>
 
 
                 </div>
@@ -184,4 +192,5 @@
     <script src="{% static 'clothes/main.js'%}"></script>
 
 </body>
+
 </html>

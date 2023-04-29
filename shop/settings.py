@@ -9,12 +9,15 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
+import mimetypes
 import os.path
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# CSS fix
+mimetypes.add_type("text/css", ".css", True)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -39,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'clothes',
     'cart',
-    'orders',    
+    'orders',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +60,7 @@ ROOT_URLCONF = 'shop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -89,7 +92,6 @@ DATABASES = {
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -106,10 +108,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+# STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATICFILES_DIRS = [
-   os.path.join(BASE_DIR, "clothes/static"),
+    os.path.join(BASE_DIR, "static"),
 ]
 
 # Default primary key field type
@@ -128,6 +130,3 @@ EMAIL_HOST_PASSWORD = 'rjffXqHPgvPCa7FjFEVA'
 ROBOKASSA_LOGIN = 'danyabelolip'
 ROBOKASSA_PASSWORD1 = 'Q1vQ9sXci9ffapX8XPu7'
 ROBOKASSA_PASSWORD2 = 'NOh4EhFLErN4XWx9M49W'
-
-
-

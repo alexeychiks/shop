@@ -1,0 +1,12 @@
+flake8
+
+# PEP 585
+flake8-pep585
+flake8-annotations-coverage
+
+# PEP 563
+flake8-type-checking
+
+# Security testing
+bandit
+

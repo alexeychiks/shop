@@ -19,8 +19,10 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Category',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(blank=True, max_length=150, null=True, verbose_name='Категория')),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True,
+                                           serialize=False, verbose_name='ID')),
+                ('name', models.CharField(blank=True, max_length=150,
+                                          null=True, verbose_name='Категория')),
                 ('url', models.SlugField(max_length=160, unique=True)),
             ],
             options={
@@ -31,11 +33,15 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Characteristic',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True,
+                                           serialize=False, verbose_name='ID')),
                 ('articul', models.CharField(max_length=150, unique=True, verbose_name='артикул')),
-                ('image1', models.ImageField(default='', upload_to='static/clothes/images/', verbose_name='Изображение1')),
-                ('image2', models.ImageField(default='', upload_to='static/clothes/images/', verbose_name='Изображение2')),
-                ('image3', models.ImageField(default='', upload_to='static/clothes/images/', verbose_name='Изображение3')),
+                ('image1', models.ImageField(default='', upload_to='static/clothes/images/',
+                                             verbose_name='Изображение1')),
+                ('image2', models.ImageField(default='', upload_to='static/clothes/images/',
+                                             verbose_name='Изображение2')),
+                ('image3', models.ImageField(default='', upload_to='static/clothes/images/',
+                                             verbose_name='Изображение3')),
                 ('sostav', models.TextField(blank=True, null=True, verbose_name='Характеристика')),
             ],
             options={
@@ -44,12 +50,16 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name='MainPictirues',
+            name='MainPictures',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('main_image1', models.ImageField(default='', upload_to='static/clothes/images/', verbose_name='Изображение1')),
-                ('main_image2', models.ImageField(default='', upload_to='static/clothes/images/', verbose_name='Изображение2')),
-                ('main_image3', models.ImageField(default='', upload_to='static/clothes/images/', verbose_name='Изображение3')),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True,
+                                           serialize=False, verbose_name='ID')),
+                ('main_image1', models.ImageField(default='', upload_to='static/clothes/images/',
+                                                  verbose_name='Изображение1')),
+                ('main_image2', models.ImageField(default='', upload_to='static/clothes/images/',
+                                                  verbose_name='Изображение2')),
+                ('main_image3', models.ImageField(default='', upload_to='static/clothes/images/',
+                                                  verbose_name='Изображение3')),
             ],
             options={
                 'verbose_name': 'Картинка',
@@ -59,15 +69,23 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Product',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True,
+                                           serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=100, verbose_name='Наименование')),
-                ('price', models.DecimalField(decimal_places=0, default=0, max_digits=10, verbose_name='Цена')),
+                ('price', models.DecimalField(decimal_places=0, default=0, max_digits=10,
+                                              verbose_name='Цена')),
                 ('description', models.TextField(blank=True, null=True, verbose_name='Описание')),
-                ('image', models.ImageField(upload_to='static/clothes/images/', verbose_name='Изображение')),
+                ('image', models.ImageField(upload_to='static/clothes/images/',
+                                            verbose_name='Изображение')),
                 ('available', models.BooleanField(default=False, verbose_name='наличие')),
                 ('url', models.SlugField(max_length=160, unique=True)),
-                ('category', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='clothes.category', verbose_name='Категория')),
-                ('characteristic', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='clothes.characteristic', verbose_name='характеристика')),
+                ('category', models.ForeignKey(blank=True, null=True,
+                                               on_delete=django.db.models.deletion.SET_NULL,
+                                               to='clothes.category', verbose_name='Категория')),
+                ('characteristic', models.ForeignKey(null=True,
+                                                     on_delete=django.db.models.deletion.SET_NULL,
+                                                     to='clothes.characteristic',
+                                                     verbose_name='характеристика')),
             ],
             options={
                 'verbose_name': 'Товар',
@@ -77,20 +95,53 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Profile',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True,
+                                           serialize=False, verbose_name='ID')),
                 ('password', models.CharField(max_length=128, verbose_name='password')),
-                ('last_login', models.DateTimeField(blank=True, null=True, verbose_name='last login')),
-                ('is_superuser', models.BooleanField(default=False, help_text='Designates that this user has all permissions without explicitly assigning them.', verbose_name='superuser status')),
-                ('username', models.CharField(error_messages={'unique': 'A user with that username already exists.'}, help_text='Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.', max_length=150, unique=True, validators=[django.contrib.auth.validators.UnicodeUsernameValidator()], verbose_name='username')),
-                ('first_name', models.CharField(blank=True, max_length=150, verbose_name='first name')),
-                ('last_name', models.CharField(blank=True, max_length=150, verbose_name='last name')),
-                ('email', models.EmailField(blank=True, max_length=254, verbose_name='email address')),
-                ('is_staff', models.BooleanField(default=False, help_text='Designates whether the user can log into this admin site.', verbose_name='staff status')),
-                ('is_active', models.BooleanField(default=True, help_text='Designates whether this user should be treated as active. Unselect this instead of deleting accounts.', verbose_name='active')),
-                ('date_joined', models.DateTimeField(default=django.utils.timezone.now, verbose_name='date joined')),
-                ('is_activated', models.BooleanField(db_index=True, default=True, verbose_name='Прошел активацию?')),
-                ('groups', models.ManyToManyField(blank=True, help_text='The groups this user belongs to. A user will get all permissions granted to each of their groups.', related_name='user_set', related_query_name='user', to='auth.group', verbose_name='groups')),
-                ('user_permissions', models.ManyToManyField(blank=True, help_text='Specific permissions for this user.', related_name='user_set', related_query_name='user', to='auth.permission', verbose_name='user permissions')),
+                ('last_login', models.DateTimeField(blank=True, null=True,
+                                                    verbose_name='last login')),
+                ('is_superuser', models.BooleanField(
+                    default=False,
+                    help_text=('Designates that this user has all permissions without '
+                               'explicitly assigning them.'), verbose_name='superuser status')),
+                ('username', models.CharField(
+                    error_messages={'unique': 'A user with that username already exists.'},
+                    help_text=('Required. 150 characters or fewer. Letters, digits and '
+                               '@/./+/-/_ only.'),
+                    max_length=150, unique=True,
+                    validators=[django.contrib.auth.validators.UnicodeUsernameValidator()],
+                    verbose_name='username')),
+                ('first_name', models.CharField(blank=True, max_length=150,
+                                                verbose_name='first name')),
+                ('last_name', models.CharField(blank=True, max_length=150,
+                                               verbose_name='last name')),
+                ('email', models.EmailField(blank=True, max_length=254,
+                                            verbose_name='email address')),
+                ('is_staff', models.BooleanField(
+                    default=False,
+                    help_text='Designates whether the user can log into this admin site.',
+                    verbose_name='staff status')),
+                ('is_active', models.BooleanField(
+                    default=True,
+                    help_text=('Designates whether this user should be treated '
+                               'as active. Unselect this instead of '
+                               'deleting accounts.'),
+                    verbose_name='active')),
+                ('date_joined', models.DateTimeField(
+                    default=django.utils.timezone.now, verbose_name='date joined')),
+                ('is_activated', models.BooleanField(db_index=True, default=True,
+                                                     verbose_name='Прошел активацию?')),
+                ('groups', models.ManyToManyField(
+                    blank=True,
+                    help_text=('The groups this user belongs to. A user will get all '
+                               'permissions granted to each of their groups.'),
+                    related_name='user_set', related_query_name='user',
+                    to='auth.group', verbose_name='groups')),
+                ('user_permissions', models.ManyToManyField(
+                    blank=True,
+                    help_text='Specific permissions for this user.',
+                    related_name='user_set', related_query_name='user',
+                    to='auth.permission', verbose_name='user permissions')),
             ],
             options={
                 'verbose_name': 'user',
