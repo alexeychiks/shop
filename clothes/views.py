@@ -64,7 +64,7 @@ def products(request: HttpRequest, slug: str) -> HttpResponse:
 def product(request: HttpRequest, product_url: str) -> HttpResponse:
     categories = models.Category.objects.all
     product = models.Product.objects.get(url=product_url)
-    cart_form = CartProductForm()
+    cart_form = CartProductForm(product.pk)
     context = {
         'product': product,
         'categories': categories,

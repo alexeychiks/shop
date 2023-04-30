@@ -38,6 +38,20 @@ class Characteristic(models.Model):
         verbose_name_plural = 'Характеристики'
 
 
+class Size(models.Model):
+    # Size: Extra Small, Small, Medium, Large, Extra Large
+    size = models.CharField(max_length=255, unique=True)
+    # Size code: XS, S, M, L, XL, XXL
+    size_code = models.CharField(max_length=8, unique=True)
+
+    def __str__(self) -> str:
+        return self.size
+
+    class Meta:
+        verbose_name = 'Size'
+        verbose_name_plural = 'Sizes'
+
+
 class Product(models.Model):
     name = models.CharField('Наименование', max_length=100)
     price = models.DecimalField('Цена', max_digits=10, decimal_places=0, default=0)
@@ -48,11 +62,10 @@ class Product(models.Model):
     characteristic = models.ForeignKey('Characteristic', on_delete=models.SET_NULL,
                                        verbose_name='характеристика', null=True)
     available = models.BooleanField(default=False, verbose_name='наличие')
-    # size1 = models.BooleanField(default=False, verbose_name='42')
-    # size2 = models.BooleanField(default=False, verbose_name='44')
-    # size3 = models.BooleanField(default=False, verbose_name='46')
-    # size4 = models.BooleanField(default=False, verbose_name='48')
     url = models.SlugField(max_length=160, unique=True)
+
+    # Product sizes
+    sizes = models.ManyToManyField(Size, through='ProductSize')
 
     def __str__(self) -> str:
         return self.name
@@ -60,6 +73,12 @@ class Product(models.Model):
     class Meta:
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'
+
+
+class ProductSize(models.Model):
+    size = models.ForeignKey(Size, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    count = models.IntegerField(default=1)
 
 
 class MainPictures(models.Model):
