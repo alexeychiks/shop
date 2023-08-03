@@ -10,7 +10,7 @@ from clothes import models
 def cart_add(request, product_id):
     cart = Cart(request)
     product = get_object_or_404(models.Product, id=product_id)
-    form = CartProductForm(request.POST)
+    form = CartProductForm(product, request.POST)
     if form.is_valid():
         cd = form.cleaned_data
         print(cd)
@@ -29,5 +29,5 @@ def cart_detail(request):
     print(request.session['cart'])
     for item in cart:
         print(item)
-        item['update_quantity_form'] = CartProductForm(initial={'size':item['size'], 'quantity':item['quantity'], 'update':True})
+        item['update_quantity_form'] = CartProductForm(item['product'], item, initial={'size':item['size'], 'quantity':item['quantity'], 'update':True})
     return render(request, 'cart/detail.html', {'cart':cart, 'categories': categories})
