@@ -55,7 +55,7 @@ def products(request, slug):
 def product(request, product_url):
     categories = models.Category.objects.all
     product = models.Product.objects.get(url=product_url)
-    cart_form = CartProductForm()
+    cart_form = CartProductForm(product)
     context = {
         'product': product,
         'categories': categories,
