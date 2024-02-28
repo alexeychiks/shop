@@ -1,7 +1,340 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6bffdfb-a09a-4da6-8a6b-e741ebee019a" name="Changes" comment="" />
+    <list default="true" id="e6bffdfb-a09a-4da6-8a6b-e741ebee019a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/clothes/static/clothes/css/cart3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clothes/static/clothes/css/clothes6.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clothes/static/clothes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/clothes/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/clothes/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/migrations/0003_alter_product_price_alter_profile_is_activated_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/migrations/0004_remove_productsizes_off_price_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/migrations/0005_alter_productsizes_options_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/migrations/0006_remove_product_size_productsizes_product.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/migrations/0007_remove_productsizes_product_product_size.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/migrations/0008_alter_profile_options_remove_product_size_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/clothes/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/css/cart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/css/clothes.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/css/footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/css/login_registration.css" beforeDir="false" afterPath="$PROJECT_DIR$/clothes/static/clothes/css/login_registration.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/css/product.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/css/utils.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/images/anya belikaya (2).gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/images/arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/images/bag.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/images/imgonline-com-ua-Resize-GGLk5xcvY5Z0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/images/logo_resize.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/images/logotip.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/images/небо.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/clothes/static/clothes/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/RelatedObjectLookups.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/actions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/change_form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/core.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/dark_mode.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/forms.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/icon-addlink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/icon-changelink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/icon-deletelink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/icon-viewlink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/jquery.init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/nav_sidebar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/nav_sidebar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/prepopulate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/prepopulate_init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/saved_resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/urlify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/static/clothes/Платье _ Change Товар _ Django site admin_files/xregexp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/templates/clothes/clothes.html" beforeDir="false" afterPath="$PROJECT_DIR$/clothes/templates/clothes/clothes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/templates/clothes/info_clothes.html" beforeDir="false" afterPath="$PROJECT_DIR$/clothes/templates/clothes/info_clothes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clothes/templates/clothes/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/clothes/templates/clothes/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/autocomplete.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/changelists.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/dark_mode.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/dashboard.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/fonts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/forms.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/nav_sidebar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/responsive_rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/vendor/select2/LICENSE-SELECT2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/vendor/select2/select2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/vendor/select2/select2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/widgets.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/fonts/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/fonts/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/fonts/Roboto-Bold-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/fonts/Roboto-Light-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/fonts/Roboto-Regular-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/calendar-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/gis/move_vertex_off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/gis/move_vertex_on.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-addlink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-alert.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-calendar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-changelink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-clock.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-deletelink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-no.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-unknown-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-unknown.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-viewlink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-yes.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/inline-delete.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/selector-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/sorting-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/tooltag-add.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/tooltag-arrowright.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/SelectBox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/SelectFilter2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/actions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/admin/DateTimeShortcuts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/admin/RelatedObjectLookups.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/autocomplete.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/cancel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/change_form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/collapse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/core.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/filters.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/inlines.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/jquery.init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/nav_sidebar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/popup_response.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/prepopulate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/prepopulate_init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/urlify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/jquery/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/az.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/bn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/bs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/cs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/dsb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/el.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/et.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/eu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/gl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/he.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hsb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/is.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ka.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/km.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/lv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/mk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/nb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ne.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ps.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pt-BR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sr-Cyrl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/th.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/tk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/uk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/vi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/zh-CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/zh-TW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/select2.full.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/select2.full.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/css/cart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/css/clothes.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/css/footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/css/for_orders.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/css/login_registration.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/css/product.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/css/profile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/css/some.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/css/utils.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/00082EA3-80F1-4725-B050-630BA82F2220.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/0A24E5CF-FC83-47C7-885A-62926F2FE7D3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/0B1CF45F-7BFA-421F-8207-AC74848AC523.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/11a1ec55ba1a1ca05514e4b9e0ff83ef--rock-roll-rockabilly.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/11a1ec55ba1a1ca05514e4b9e0ff83ef--rock-roll-rockabilly_grUq0jE.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/11a1ec55ba1a1ca05514e4b9e0ff83ef--rock-roll-rockabilly_q5wJCX6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/27845555-7C5E-4CE4-B6C9-2AEE93813AA6.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/37B70A7D-CA36-4A12-9068-9A2F7EA15030.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/479693DF-516F-498F-988D-D157FCE48E6D.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/54143C9E-6258-4E24-A309-55BB7DF8074E.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/59BB4FD6-927E-4441-BB78-DAF5B553F9CD.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/6E319326-67A9-40A3-B9B9-5ADB1B528DD6.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/72BBEB2A-987F-4DF9-A8F6-E52B78987755.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/768ABCE9-62AB-4BA2-BC1C-F7E9F5307908.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/84336FC3-308B-4B5D-8DCC-D21AAA243DDE.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/86527D89-368E-45BF-B647-1F6C8AE02C38.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/94A2EA5D-1C25-4161-8B5D-5459962C9C49.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/Anya-Bеlikaya_3506.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/Anya-Bеlikaya_3506_lSCtGSx.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/Anya-Bеlikaya_3515.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/Anya-Bеlikaya_3549.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/Anya-Bеlikaya_3549_eFX22Pd.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/Anya-Bеlikaya_3573.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/Anya-Bеlikaya_3589.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/C2209859-45F4-42C0-A327-7234DDDC8CB2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/C3408153-4C4D-4569-8587-45D692213E41.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/C8ED8755-290F-4CB3-B2D3-A8151A01DC49.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/C9CED05F-D0A0-43C7-A89B-FB371DD3B4F3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/DE7AEC79-1005-4AEC-8E7A-D6BC80BFC7C2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/E4B48103-2C8D-45F2-9058-8A4D5E87B0D2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/E885FE46-E187-4529-B428-9E574F64AF5D.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/EB9474A0-9CF6-4846-98D5-0CE36AEF2E7C.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/F592DBCA-F14C-4B87-BCC0-FA91A5C40BFE.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/FCCFFD31-8C7F-4E94-B391-4CC66C34304D.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/FOTO3166_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3316.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3316_4eEsMXm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3324.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3324_goOL7Sl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3346.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3346_X9m69D6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3352.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3355.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3408.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3409.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3420.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3420_xKIuHth.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3428.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3437.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3439.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3448.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3451.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3461.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3472.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3481.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3487.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3493.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3494.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3497.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3497_lUH0wEG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3503.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3513.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3516.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3540.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3540_4o4M1Ya.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3546_.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3549.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3556.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3556_rDq4NWj.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3559.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3565.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3567.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3580.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_3580_u4SASw0.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/IMG_6252.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/anya belikaya (2).gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/bag.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/first.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/fullsize.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/icons8-смартфон-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-0xgAMyvGIi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-1Xyw31YiV8YiABc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-1Xyw31YiV8YiABc_jclS0s8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-1Xyw31YiV8YiABc_jclS0s8_9X7BPuY.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-1Xyw31YiV8YiABc_jclS0s8_Pl9B2Xx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-4P3Fe9zksAyRNrI_rfbjqHw.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-5hkqup6vKx7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-7BykDLTp31.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-7nSPwNXT9OCplvrx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-86TNM7Nx76.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-93GTgm6eUfUjGBrW_AWq87fs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-GGLk5xcvY5Z0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-JsqXYhFVIJ3gFniM.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-OaNt8WxA9aodVj7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-Og3zkW3hmIRQS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-R3iovkqrPHDR1T.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-Wb4HSDbQgLEdH_0MJbA98.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-csMfeamxZRh8E0d0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-dRAIDCR8NN.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-ekJnDOyx7Y.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-qfnJ1ys1Wy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-vRZncsqrjhlNUdJF.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/imgonline-com-ua-Resize-zhh5FT1ZkQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/logo_resize.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/logotip.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/mail_icon_128820.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/photo_2023-01-31_17-17-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/unnamed.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/images/небо.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/RelatedObjectLookups.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/actions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/change_form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/core.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/dark_mode.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/forms.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/icon-addlink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/icon-changelink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/icon-deletelink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/icon-viewlink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/jquery.init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/nav_sidebar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/nav_sidebar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/prepopulate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/prepopulate_init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/saved_resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/urlify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clothes/Платье _ Change Товар _ Django site admin_files/xregexp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/orders/create_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/orders/create_order.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +351,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/Рабочий стол/Python/brains" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

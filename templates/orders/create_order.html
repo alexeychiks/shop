@@ -19,7 +19,7 @@
     <form action="https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=danyabelolip&InvoiceID=0&Culture=ru&Encoding=utf-8&OutSum={{ cart.get_total_price }}&SignatureValue={{signature}}" method="post" class="order-form">
         <div class="container_login">
         {{ form.as_p }}
-{% csrf_token %}
+       {% csrf_token %}
       <p><input class="button" type="submit" value="Перейти к оплате"></p>
 
 

@@ -1,45 +1,8 @@
-*{
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-*,*:before,*:after{
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-:focus,:active{outline: none;}
-a:focus, a:active{outline: none;}
-
-nav,footer,header,aside{display: block;}
-
-html,body{
-  color: #252B42;
-  font-family: 500;
-  height: 100%;
-  width:100%;
-  font-size: 100%;
-  line-height: -1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-input,button,textarea{font-family: inherit;}
-
-input::-ms-clear{display:none;}
-button{cursor: pointer;}
-a,a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align:top;}
-
 .container_login{
 display:flex;
-margin: 4% 40% 0% 40%;
+margin: 0 10%;
 align-items:center;
 flex-direction: column;
-background-color: rgba(225, 225, 225, 0.523);
 border-radius: 10px;
 max-width: 100%;
 }
@@ -47,15 +10,15 @@ form{
   margin: 0 0 10% 0;
 }
 .pole:focus{
-background-color: rgba(233, 218, 218, 0.759);box-shadow: 0 0 5px rgb(236, 236, 236);
+background-color: rgba(233, 218, 218, 0.759);
+  box-shadow: 0px 0px 6px 1px rgba(34, 60, 80, 0.2);
 }
 .pole{
 display: block;
-
-
+  width: 300px;
   padding:10px;
   margin:10px 3%;
-  border: 2px solid #black;
+  border: 2px solid black;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
@@ -71,48 +34,28 @@ display:block;
 margin: 5% 3%}
 
 
-.button {
-  display:block;
+.button_login {
+  display: inline-block;
+
   text-align: center;
   border: 2px solid #000;
+  max-width: 100%;
   color: black;
-  padding: 10px;
-  margin-bottom: 5%;
+  padding: 15px;
+  margin: 5% auto;
   background-color: white;
-  margin-top: 5%;
 }
-.button:hover{
+.button_login:hover{
   background-color: #000;
   color: white;
 }
-
-
-.clothes_title {
-  text-align: center;
-  font-size: 28px;
-}
-@media(max-width:1016px){
-  .main_category{
-    margin: 7% 0 0 0;
-    padding: 7% 0 3% 0;;
-  }
-@media(max-width:1136px){
-    form{
-     margin: 10% 20% 5% 20%;
-    }
-}
-}
-@media(max-width:781px){
-
-  .clothes_title{
-    font-size: 20px;
-    color: black;
-  }
-  .container_login{
-  margin:0;
-  }
-  form{
-     margin: 10% 5% 5% 5%;
-  }
+@media (max-width:781px){
+      .pole{
+        font-size: 10px;
+        width: 200px;
+      }
+      label {
+        font-size: 14px;
+      }
 }
 

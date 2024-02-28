@@ -25,7 +25,10 @@ def order_create(request):
                 OrderItem.objects.create(order=order, product=item['product'],
                                          price=item['price'],
                                          quantity=item['quantity'])
-
+    form = OrderCreateForm()
+    signature = calculate_signature('danyabelolip', str(cart.get_total_price()), 0, '789456sugak')
+    return render(request, 'orders/create_order.html',
+                      {'cart': cart, 'form': form, 'categories': categories, 'signature': signature, })
             subject = 'Номер заказа: {}'.format(order.id)
             message = '{},\n\nВаш заказ был принят!\
                               ID вашего заказа: {}.'.format(order.first_name, order.id)
@@ -41,11 +44,5 @@ def order_create(request):
                 mes = 'Заказ: {}\n почта клиента: {}\n{} X {} цена: {}р\nразмер: {}\nадресс доставки: {}'.format(order.id, order.email, col, articul, price,size, order.address )
                 send_mail(subject, mes, EMAIL_HOST_USER, ['anyabelikaya@mail.ru'])
             cart.clear()
-    else:
 
-        form = OrderCreateForm()
-        signature = calculate_signature('danyabelolip',str(cart.get_total_price()),0,'789456sugak')
-    return render(request, 'orders/create_order.html',
-                  {'cart': cart, 'form': form, 'categories': categories,'signature':signature, })
-def sucsess(request):
-    return render(request,'orders/created_order.html')
+

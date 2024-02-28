@@ -10,17 +10,7 @@ from .models import Product
 
 class LoginForm(AuthenticationForm):
         username = forms.CharField(label='Логин', widget=forms.TextInput(attrs={'class': 'pole'}))
-        email = forms.EmailField(label='Почта', widget=forms.EmailInput(attrs={'class': 'pole'}))
         password = forms.CharField(label='Пароль', widget=forms.PasswordInput(attrs={'class': 'pole'}))
-        class Meta:
-            model = Profile
-        def clean_email(self):
-            email = self.cleaned_data.get('email')
-            if email and Profile.objects.filter(email=email).exists():
-                #raise forms.ValidationError(u'Email addresses must be unique.')
-               return email
-            else:
-                raise forms.ValidationError('Неправильная почта')
         def clean_username(self):
             username = self.cleaned_data.get('username')
             if username and Profile.objects.filter(username=username).exists():
@@ -28,6 +18,8 @@ class LoginForm(AuthenticationForm):
                return username
             else:
                 raise forms.ValidationError('Неправильный логин')
+        def clean_password(self):
+            password = self.cleaned_data.get('password')
 
 
 
