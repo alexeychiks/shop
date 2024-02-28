@@ -1,12 +1,17 @@
 {% extends 'index.html' %}
 {%load static%}
 {% block title %}Вход{% endblock %}
+{% block dop_style%}<link rel="stylesheet" href="{% static 'clothes/css/login_registration.css' %}">{% endblock %}
 {% block content %}
-<div class="main_category"><p class="clothes_title">Вход<br><a class="button" href="{% url 'register' %}" >Зарегестрироваться</a> </p></div>
+<div class="main_category"><p class="clothes_title">Вход</p></div>
+<br>
+<div class="container_login">
+<a class="button_login" href="{% url 'register' %}" >Зарегестрироваться</a>
+<br>
 <form method='post'><div class="container_login">
 {% csrf_token %}
 {{ form.as_p }}
-<input type="submit" value="Войти" class="button"></div>
+<input type="submit" value="Войти" class="button_login"></div>
 </form>
-
+</div>
 {% endblock %}

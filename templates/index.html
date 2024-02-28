@@ -9,21 +9,10 @@
     <meta name="keywordws" content="ключевые слова">
     <meta name="Author" content="Алексей">
     {% block title%}<title>Anya Belikaya</title>{%endblock%}
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Roboto+Slab&family=Yeseva+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">'
-<link rel="stylesheet" href="{% static 'clothes/css/style.css'%}">
-<link rel="stylesheet" href="{% static 'clothes/css/clothes.css'%}">
-<link rel="stylesheet" href="{% static 'clothes/css/product.css'%}">
-    <link rel="stylesheet" href="{% static 'clothes/css/login_registration.css'%}">
-    <link rel="stylesheet" href="{% static 'clothes/css/for_orders.css'%}">
-    <link rel="stylesheet" href="{% static 'clothes/css/cart.css'%}">
-    <link rel="stylesheet" href="{% static 'clothes/css/utils.css'%}">
-    <link rel="stylesheet" href="{% static 'clothes/css/footer.css'%}">
+    <link rel="stylesheet" href="{% static 'css/base6.css' %}">
+    {% block dop_style%}{%endblock%}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">'
 
-<link rel="stylesheet" href="{% static 'clothes/css/some.css'%}">
 </head>
 <body>
     <div class="wrapper">
@@ -97,9 +86,7 @@
 
                     {%endfor%}
                 </div>
-                <div class="thirdp swiper-button-prev"></div>
-                <div class="thirdn swiper-button-next"></div>
-            </div>
+                            </div>
             <div class="new_colections">ПОПУЛЯРНЫЕ ТОВАРЫ</div>
             <div class="line"></div>
             <div class="swiperrr" id="third">
@@ -116,9 +103,7 @@
                     {%endfor%}
 
                 </div>
-                <div class="secondp swiper-button-prev"></div>
-                <div class="secondn swiper-button-next"></div>
-            </div>
+                            </div>
         {%endblock%}
         </main>
 
@@ -182,6 +167,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="{% static 'clothes/main.js'%}"></script>
+
 
 </body>
 </html>

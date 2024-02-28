@@ -1,5 +1,6 @@
 {% extends 'index.html'%}
 {%load static%}
+{% block dop_style%} <link rel="stylesheet" href="{% static 'clothes/css/clothes6.css' %}"> {% endblock %}
 {% block title%}<title>{{category}}</title>{%endblock%}
 {% block content %}<div class="main_category"><p class="clothes_title">{{category}}</p></div>
 <div class="container_product">
@@ -8,14 +9,14 @@
         <a href="{% url 'product' product.url%}" class="more_info">
         <div class="product">
             <img src="{{ product.image.url }}" alt="" class="product_img">
-            <p class="text">{{product.name}} </p>
+            <p class="text">{{product.name}}</p>
             <br>
-            <p class="cost">{{product.price}}</p>
+            <p class="cost">{{product.price}}₽</p>
             <div class="liner"></div>
         </div>
         </a>
         <br>
         <br>
-{%endfor%}
+        {%endfor%}
 </div>
 {%endblock%}
